@@ -1,8 +1,8 @@
 # This is Cloud DevOps interview task
 
-Requirement: You are developing an exercise for Cloud DevOps students where student’s solution is tested using a test script. And execution of student solution and test script should be automated using Docker.
+**Requirement:-** You are developing an exercise for Cloud DevOps students where student’s solution is tested using a test script. And execution of student solution and test script should be automated using Docker.
 
-Solution:- Solution consist of a Log file, a student solution script, a test script , Dockerfile and Readmd file. Functions of each file is described below in detail.
+**Solution:-** Solution consist of a Log file, a student solution script, a test script , Dockerfile and Readmd file. Functions of each file is described below in detail.
 
 Linux_2k.log : This file contains some old logs. Which will be base for our solution.
 
