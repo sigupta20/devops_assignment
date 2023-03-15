@@ -12,6 +12,10 @@
 count_sol=$(bash student_solution.sh | wc -l)
 
 #Taking counts from the log file directly
+# Count should be 16
+# if [ $count == 16 ]; then echo "Solution is correct !"; else echo "Solution is not correct !"; fi
+
+
 count_test=$(cat Linux_2k.log | grep '^Jun 18' |awk '{print $3}' | sed 's/://g' | awk '$1 >= 20000 && $1 <= 40000' | wc -l)
 
 # If the script count equals the count from the log file then solution is correct
