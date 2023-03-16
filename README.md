@@ -15,25 +15,25 @@ Dockerfile : This file will automate the execution of both solution and test scr
 Steps to build Dockerfile:-
 
 To build image from Docker file run command: 
-sudo docker build . -t sigupta20/devops
+$ sudo docker build . -t sigupta20/devops
 
 To check if image has been created, run command: 
-sudo docker images
+$ sudo docker images
 
 To run the container from the image built in last step, run command: 
-sudo docker run -it -d sigupta20/devops
+$ sudo docker run -it -d sigupta20/devops
 
 To check if container is running, run command: 
-sudo docker ps
+$ sudo docker ps
 
 To enter inside the container, run command: 
-sudo docker exec -it 062875b34de6 bash
+$ sudo docker exec -it 062875b34de6 bash
 
 To check if files has been copied correctly, run command:-
-ls -lrt
+$ ls -lrt
 
 To come out of container , run command: 
-exit
+$ exit
 
 
 
