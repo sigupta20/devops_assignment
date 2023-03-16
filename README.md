@@ -12,7 +12,7 @@ test_script.sh : The purpose of this script to check wether the student_solution
 
 Dockerfile : This file will automate the execution of both solution and test script every time this Dockerfile will be built. With the file a docker container of ubuntu image will be created and scripts will run inside the container.
 
-Steps to build Dockerfile:-
+**Steps to build Dockerfile:-**
 
 To build image from Docker file run command: 
 $ sudo docker build . -t sigupta20/devops
