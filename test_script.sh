@@ -12,11 +12,11 @@
 count_sol1=$(bash student_solution.sh | wc -l)
 count_sol=$(expr $count_sol1 - 4)
 
-#Taking counts from the log file directly
-# Count should be 16
+
 # if [ $count == 16 ]; then echo "Solution is correct !"; else echo "Solution is not correct !"; fi
 
-
+#Taking counts from the log file directly
+# Count should be 16
 count_test=$(cat Linux_2k.log | grep '^Jun 18' |awk '{print $3}' | sed 's/://g' | awk '$1 >= 20000 && $1 <= 40000' | wc -l)
 
 echo "Number of logs in solution script: $count_sol"
