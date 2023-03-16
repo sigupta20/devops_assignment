@@ -14,8 +14,10 @@ Dockerfile : This file will automate the execution of both solution and test scr
 
 **Steps to build Dockerfile:-**
 
-To build image from Docker file run command: 
+To build image from Docker file, run command: 
 $ sudo docker build . -t sigupta20/devops
+
+Note: sigupta20/devops is an image name and the image name can be anything here.
 
 To check if image has been created, run command: 
 $ sudo docker images
