@@ -31,6 +31,8 @@ $ sudo docker ps
 To enter inside the container, run command: 
 $ sudo docker exec -it 062875b34de6 bash
 
+Note: 062875b34de6 is image-id here and it is always unique and vary for everyone.
+
 To check if files has been copied correctly, run command:-
 $ ls -lrt
 
