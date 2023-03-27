@@ -18,13 +18,11 @@ jobs:
 
       - name: Execute student_solution.sh
         run: |-
-          cd devops_assignment
           chmod +x student_solution.sh
           bash student_solution.sh
           
       - name: Execute test_script.sh
         run: |-
-          cd devops_assignment
           chmod +x test_script.sh
           bash test_script.sh
 
