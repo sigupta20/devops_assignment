@@ -9,6 +9,7 @@
 
 
 #Counting the number of logs through running the script and storing output in count variable
+#hello
 count_sol1=$(bash student_solution.sh | wc -l)
 count_sol=$(expr $count_sol1 - 4)
 
