@@ -30,7 +30,7 @@ jobs:
         run: |-
           docker rm -f $(sudo docker ps -a)
           docker build . -t sigupta20/devops
-          docker run -d sigupta20/devops
+          docker run -it -d sigupta20/devops
           container_id=$(sudo docker ps | awk '{ print $1}' | grep -v CONTAINER)
           docker exec $container_id bash
           files=$(ls -lrt | wc -l)
