@@ -29,7 +29,7 @@ jobs:
       - name: Check solution
         run: |-
           docker rm -f $(sudo docker ps -a)
-          docker rmi -f $(sudo docker iamges -a)
+          docker rmi -f $(sudo docker images -a)
           docker build . -t sigupta20/devops
           docker run -d sigupta20/devops
           container_id=$(sudo docker ps | awk '{ print $1}' | grep -v CONTAINER)
