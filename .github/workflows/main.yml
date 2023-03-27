@@ -1,0 +1,44 @@
+name: devops_assignment
+
+on:
+  push:
+    branches:
+      - 'main'
+      
+jobs:
+  build:
+    runs-on: ubuntu:22.04
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+      
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Execute student_solution.sh
+        run: |-
+          cd devops_assignment
+          chmod +x student_solution.sh
+          bash student_solution.sh
+          
+      - name: Execute test_script.sh
+        run: |-
+          cd devops_assignment
+          chmod +x test_script.sh
+          bash test_script.sh
+
+      - name: Check solution
+        run: |-
+          docker build . -t sigupta20/devops
+          docker run -it -d sigupta20/devops
+          container_id=$(sudo docker ps | awk '{ print $1}' | grep -v CONTAINER)
+          docker exec -it $container_id bash
+          files=$(ls -lrt | wc -l)
+          if ($files == 6 )
+          then
+          echo "Successful"
+          exit 0
+          fi
+          exit
+
